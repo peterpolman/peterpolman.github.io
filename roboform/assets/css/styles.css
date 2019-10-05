@@ -145,3 +145,9 @@ body {
     width: 100%;
     text-align: right;
 }
+
+.input-group-move {
+    cursor: move;
+    align-items: center;
+    padding: 0 .5rem;
+}

@@ -104,11 +104,14 @@
                     <i class="fas fa-arrows-alt"></i>
                 </div>
                 <div class="card-title">
-                    Lees dit goed voor je aan de test begint.
+                    Lees dit goed voor je aan de test begint!
                 </div>
                 <div class="card-meta">
                     <span class="badge badge-primary">
                         Algemeen
+                    </span>
+                    <span class="badge badge-secondary">
+                        Text
                     </span>
                 </div>
                 <div class="card-actions">
@@ -163,6 +166,9 @@
                     <span class="badge badge-success">
                         Persoonlijk
                     </span>
+                    <span class="badge badge-secondary">
+                        Number
+                    </span>
                 </div>
                 <div class="card-actions">
                     <button class="btn btn-sm btn-secondary">
@@ -179,15 +185,17 @@
             <div class="card-body bg-light container collapse" id="collapseElementNumber">
                 <div class="row">
                     <div class="form-group col-9">
-                        <input type="text" class="form-control form-control-sm" placeholder="Text step title" value="Wat is je leeftijd?">
+                        <input type="text" class="form-control form-control-sm" placeholder="Question label" value="Wat is je leeftijd?">
                     </div>
                     <div class="form-group col-3">
                         <select class="form-control form-control-sm">
-                            <option selected="selected">Algemeen</option>
-                            <option>Persoonlijk</option>
+                            <option>Algemeen</option>
+                            <option selected="selected">Persoonlijk</option>
                         </select>
                     </div>
-                    <div class="form-group col-4">
+                </div>
+                <div class="row">
+                    <div class="form-group col-3">
                         <div class="input-group input-group-sm">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Min</span>
@@ -195,7 +203,7 @@
                             <input id="inputNumberMin" type="number" class="form-control" value="0">
                         </div>
                     </div>
-                    <div class="form-group col-4">
+                    <div class="form-group col-3">
                         <div class="input-group input-group-sm">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Max</span>
@@ -203,15 +211,17 @@
                             <input id="inputNumberMin" type="number" class="form-control" value="0">
                         </div>
                     </div>
-                    <div class="form-group col-4 text-right">
-                        <a href="#" class="btn btn-link btn-sm" data-toggle="collapse">Add element description</a>
+                    <div class="form-group col-3 text-right">
+                        <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#collapseNumberDescription0"><small>Add description</small></a>
                     </div>
-                    <div class="form-group col-12">
+                </div>
+                <div class="row collapse" id="collapseNumberDescription0">
+                    <div class="form-group col-9">
                         <textarea class="form-control form-control-sm" placeholder="Provide a short description for this element."></textarea>
                     </div>
                 </div>
                 <div class="card-body-actions">
-                    <button class="btn btn-sm btn-link" data-toggle="collapse" href="#collapseElementText">
+                    <button class="btn btn-sm btn-link" data-toggle="collapse" href="#collapseElementNumber">
                         Cancel
                     </button>
                     <button class="btn btn-sm btn-link text-danger">
@@ -229,22 +239,171 @@
                     <i class="fas fa-arrows-alt"></i>
                 </div>
                 <div class="card-title">
-                    Lees dit goed voor je aan de test begint. 2
+                    Wat is je geslacht?
                 </div>
                 <div class="card-meta">
                     <span class="badge badge-success">
                         Persoonlijk
+                    </span>
+                    <span class="badge badge-secondary">
+                        Radios
                     </span>
                 </div>
                 <div class="card-actions">
                     <button class="btn btn-sm btn-secondary">
                         <i class="fas fa-eye"></i>
                     </button>
-                    <button class="btn btn-sm btn-secondary">
+                    <button class="btn btn-sm btn-secondary" data-toggle="collapse" href="#collapseElementRadios">
                         <i class="fas fa-edit"></i>
                     </button>
                     <button class="btn btn-sm btn-danger" data-toggle="modal" href="#modalDeleteElement">
                         <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body bg-light container collapse" id="collapseElementRadios">
+                <div class="row">
+                    <div class="form-group col-9">
+                        <input type="text" class="form-control form-control-sm" placeholder="Question label" value="Wat is je geslacht?">
+                    </div>
+                    <div class="form-group col-3">
+                        <select class="form-control form-control-sm">
+                            <option>Algemeen</option>
+                            <option selected="selected">Persoonlijk</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="sortableAnswers">
+                    <div class="row">
+                        <div class="form-group col-9">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend input-group-move">
+                                    <i class="fas fa-arrows-alt text-secondary"></i>
+                                </div>
+                                <input id="inputAnswerCheckbox0" type="text" class="form-control" placeholder="Answer label 0" value="Man">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <a href="#" data-toggle="collapse" data-target="#collapseAnswerDescription0"><small>Add description</small></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseAnswerDescription0">
+                                <textarea class="form-control form-control-sm" rows="2" placeholder="Provide a short description for this answer."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group col-3">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Points</span>
+                                </div>
+                                <input id="inputAnswerPoints" type="number" class="form-control" min="0" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-9">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend input-group-move">
+                                    <i class="fas fa-arrows-alt text-secondary"></i>
+                                </div>
+                                <input id="inputAnswerCheckbox0" type="text" class="form-control" placeholder="Answer label 0" value="Vrouw">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <a href="#" data-toggle="collapse" data-target="#collapseAnswerDescription1"><small>Add description</small></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseAnswerDescription1">
+                                <textarea class="form-control form-control-sm" rows="2" placeholder="Provide a short description for this answer."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group col-3">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Points</span>
+                                </div>
+                                <input id="inputAnswerPoints" type="number" class="form-control" min="0" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body-actions">
+                    <button class="btn btn-sm btn-link" data-toggle="collapse" href="#collapseElementRadios">
+                        Cancel
+                    </button>
+                    <button class="btn btn-sm btn-link text-danger">
+                        Discard changes
+                    </button>
+                    <button class="btn btn-sm btn-primary">
+                        Save text
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-light card-element">
+            <div class="card-header bg-dark text-light">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    Wil je verder nog wat zeggen?
+                </div>
+                <div class="card-meta">
+                    <span class="badge badge-primary">
+                        Algemeen
+                    </span>
+                    <span class="badge badge-secondary">
+                        Text Input
+                    </span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-secondary" data-toggle="collapse" href="#collapseElementTextInput" role="button" aria-expanded="false" aria-controls="collapseElementNumber">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger" data-toggle="modal" href="#modalDeleteElement">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body bg-light container collapse" id="collapseElementTextInput">
+                <div class="row">
+                    <div class="form-group col-9">
+                        <input type="text" class="form-control form-control-sm" placeholder="Question label" value="Wil je verder nog wat zeggen?">
+                    </div>
+                    <div class="form-group col-3">
+                        <select class="form-control form-control-sm">
+                            <option>Algemeen</option>
+                            <option selected="selected">Persoonlijk</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-9">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" placeholder="Text input placeholder value" value="">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <a href="#" data-toggle="collapse" data-target="#collapseTextInputDescription1"><small>Add description</small></a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseTextInputDescription1">
+                            <textarea class="form-control form-control-sm" rows="2" placeholder="Provide a short description for this text input element."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body-actions">
+                    <button class="btn btn-sm btn-link" data-toggle="collapse" href="#collapseElementTextInput">
+                        Cancel
+                    </button>
+                    <button class="btn btn-sm btn-link text-danger">
+                        Discard changes
+                    </button>
+                    <button class="btn btn-sm btn-primary">
+                        Save text
                     </button>
                 </div>
             </div>
@@ -419,8 +578,8 @@
 
     </main>
 
-    <div class="modal" tabindex="-1" role="dialog" id="modalAddCode">
-    <div class="modal-dialog" role="document">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalAddCode">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Add a HTML paragraph to your report</h5>
@@ -443,8 +602,8 @@
         });
     </script>
 </div>
-<div class="modal" tabindex="-1" role="dialog" id="modalAddTag">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" tabindex="-1" role="dialog" id="modalAddTag">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Add a tag to your form</h5>
@@ -462,8 +621,8 @@
         </div>
     </div>
 </div>
-<div class="modal" tabindex="-1" role="dialog" id="modalDeleteForm">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" tabindex="-1" role="dialog" id="modalDeleteForm">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Delete this form.</h5>
@@ -481,8 +640,8 @@
         </div>
     </div>
 </div>
-<div class="modal" tabindex="-1" role="dialog" id="modalDeleteElement">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" tabindex="-1" role="dialog" id="modalDeleteElement">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Delete this element</h5>
@@ -500,8 +659,8 @@
         </div>
     </div>
 </div>
-<div class="modal" tabindex="-1" role="dialog" id="modalEditVisibilityRules">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" tabindex="-1" role="dialog" id="modalEditVisibilityRules">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Edit visibility rules</h5>
@@ -521,11 +680,11 @@
 </div>
 <script>
 $(document).ready(function() {
-    $("#sortableElements, #sortableReporting").sortable({
+    $("#sortableElements, #sortableReporting, #sortableAnswers").sortable({
         placeholder: "alert-warning",
         forcePlaceholderSize: true
     });
-    $("#sortableElements, #sortableReporting").disableSelection();
+    $("#sortableElements, #sortableReporting, #sortableAnswers").disableSelection();
 });
 </script>
 
