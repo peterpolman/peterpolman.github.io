@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Homepage | Roboform</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/p4wll374g1finl0fz7ply01b4rdpm4gznotxj7aiq3po3x7q/tinymce/5/tinymce.min.js"></script>
+    <script src="https://kit.fontawesome.com/542e44eee1.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="page- page-home d-flex">
+
+    <nav class="region-navbar">
+            <div class="navbar navbar-dark bg-dark">
+    <a href="#" class="navbar-brand btn btn-primary">
+        <i class="fas fa-robot"></i>
+    </a>
+    <div class="navbar-nav">
+        <a class="nav-link" href="#">Forms</a>
+        <a class="nav-link" href="#">Users</a>
+        <a class="nav-link disabled" href="#">Analytics</a>
+    </div>
+    <div class="navbar-right">
+        <a class="nav-link" href="#">
+            <i class="fas fa-user-circle"></i>
+        </a>
+        <a class="nav-link" href="#">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+</div>
+    </nav>
+
+    <main role="main" class="region-main">
+
+        <div class="jumbotron">
+            <div class="container">
+                <div class="dropdown">
+    <button class="btn btn-lg btn-link float-right" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-ellipsis-v"></i>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Settings</a>
+        <a class="dropdown-item" href="#">Publish</a>
+        <a class="dropdown-item" href="#">Delete</a>
+        <a class="dropdown-item" href="#">Save</a>
+    </div>
+</div>
+<h1 class="h2">De ADHD Zelf-test</h1>
+                <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-elements-tab" data-toggle="tab" href="#nav-elements" role="tab" aria-controls="nav-elements" aria-selected="true">Elements</a>
+    <a class="nav-item nav-link" id="nav-reporting-tab" data-toggle="tab" href="#nav-reporting" role="tab" aria-controls="nav-reporting" aria-selected="false">Reporting</a>
+    <a class="nav-item nav-link" id="nav-entries-tab" data-toggle="tab" href="#nav-entries" role="tab" aria-controls="nav-entries" aria-selected="false">Entries</a>
+</nav>
+            </div>
+        </div>
+
+        <article class="region-content container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-elements" role="tabpanel" aria-labelledby="nav-elements-tab">
+        <div class="alert alert-info">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    Configure your form in way that suits your organisation best. Add various types of elements and show them conditionally with visibility rules.
+</div>
+<hr>
+<div class="filter-elements">
+    <i class="fas fa-filter text-secondary mr-2"></i>
+    <span class="badge badge-primary">
+        Algemeen
+        <i class="fas fa-times"></i>
+    </span>
+    <span class="badge badge-success">
+        Persoonlijk
+        <i class="fas fa-times"></i>
+    </span>
+    <span class="badge badge-white text-warning">
+        Jeugd
+    </span>
+    <span class="badge badge-white text-danger">
+        Gevaar
+    </span>
+    <button data-toggle="modal" data-target="#modalAddTag" class="btn btn-sm btn-primary btn-add-tag float-right">
+        <i class="fas fa-plus"></i>
+    </button>
+</div>
+<hr>
+<div class="sortable-overflow">
+    <div class="sortable" id="sortableElements">
+        <div class="card card-light card-element">
+            <div class="card-header bg-dark text-light">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    Lees dit goed voor je aan de test begint.
+                </div>
+                <div class="card-meta">
+                    <span class="badge badge-primary">
+                        Algemeen
+                    </span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary" data-toggle="modal" href="#modalEditVisibilityRules">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn btn-sm btn-secondary" data-toggle="collapse" href="#collapseElementText" role="button" aria-expanded="false" aria-controls="collapseElementText">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger" data-toggle="modal" href="#modalDeleteElement">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body bg-light container collapse" id="collapseElementText">
+                <div class="row">
+                    <div class="form-group col-9">
+                        <input type="text" class="form-control form-control-sm" placeholder="Text step title" value="Lees dit goed voor je aan de test begint.">
+                    </div>
+                    <div class="form-group col-3">
+                        <select class="form-control form-control-sm">
+                            <option selected="selected">Algemeen</option>
+                            <option>Persoonlijk</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12">
+                        <textarea cols="30" rows="3" class="form-control form-control-sm">Voor je aan de test begint dien je er voor te zorgen dat de mind at ease is en de deur op slot.</textarea>
+                    </div>
+                </div>
+                <div class="card-body-actions">
+                    <button class="btn btn-sm btn-link" data-toggle="collapse" href="#collapseElementText">
+                        Cancel
+                    </button>
+                    <button class="btn btn-sm btn-link text-danger">
+                        Discard changes
+                    </button>
+                    <button class="btn btn-sm btn-primary">
+                        Save text
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-light card-element">
+            <div class="card-header bg-dark text-light">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    Wat is je leeftijd?
+                </div>
+                <div class="card-meta">
+                    <span class="badge badge-success">
+                        Persoonlijk
+                    </span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-secondary" data-toggle="collapse" href="#collapseElementNumber" role="button" aria-expanded="false" aria-controls="collapseElementNumber">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger" data-toggle="modal" href="#modalDeleteElement">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body bg-light container collapse" id="collapseElementNumber">
+                <div class="row">
+                    <div class="form-group col-9">
+                        <input type="text" class="form-control form-control-sm" placeholder="Text step title" value="Wat is je leeftijd?">
+                    </div>
+                    <div class="form-group col-3">
+                        <select class="form-control form-control-sm">
+                            <option selected="selected">Algemeen</option>
+                            <option>Persoonlijk</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-4">
+                        <div class="input-group input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Min</span>
+                            </div>
+                            <input id="inputNumberMin" type="number" class="form-control" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-4">
+                        <div class="input-group input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Max</span>
+                            </div>
+                            <input id="inputNumberMin" type="number" class="form-control" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-4 text-right">
+                        <a href="#" class="btn btn-link btn-sm" data-toggle="collapse">Add element description</a>
+                    </div>
+                    <div class="form-group col-12">
+                        <textarea class="form-control form-control-sm" placeholder="Provide a short description for this element."></textarea>
+                    </div>
+                </div>
+                <div class="card-body-actions">
+                    <button class="btn btn-sm btn-link" data-toggle="collapse" href="#collapseElementText">
+                        Cancel
+                    </button>
+                    <button class="btn btn-sm btn-link text-danger">
+                        Discard changes
+                    </button>
+                    <button class="btn btn-sm btn-primary">
+                        Save text
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-light card-element">
+            <div class="card-header bg-dark text-light">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    Lees dit goed voor je aan de test begint. 2
+                </div>
+                <div class="card-meta">
+                    <span class="badge badge-success">
+                        Persoonlijk
+                    </span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger" data-toggle="modal" href="#modalDeleteElement">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="tab-pane fade " id="nav-reporting" role="tabpanel" aria-labelledby="nav-reporting-tab">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAddCode">
+    <i class="fas fa-code"></i>
+    Add HTML
+</button>
+<button type="button" class="btn btn-primary">
+    <i class="fas fa-star"></i>
+    Add Score
+</button>
+<button type="button" class="btn btn-primary">
+    <i class="fas fa-mouse"></i>
+    Add Button
+</button>
+<hr>
+<div class="sortable-overflow">
+    <div class="sortable" id="sortableReporting">
+        <div class="card card-light card-element">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    <h2 class="h4">De aanwezigheid van AD(H)D bij het kind is aannemelijk</h2>
+                    <p>Op basis van de door jouw ingevulde antwoorden is het aannemelijk dat het kind te maken heeft met aan AD(H)D gerelateerde klachten. Niet alleen wordt er hoog gescoord op het gebied van aandacht en concentratie, maar wordt er ook (boven)gemiddeld gescoord op het gebied van hyperactiviteit en impulsiviteit.</p>
+                </div>
+                <div class="card-meta">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn btn-sm btn-secondary" data-toggle="collapse" href="#collapseCard" role="button" aria-expanded="false" aria-controls="collapseCard">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-light card-element">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    <div class="progress" >
+                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            75%
+                        </div>
+                    </div>
+                </div>
+                <div class="card-meta">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn btn-sm btn-secondary" data-toggle="collapse" href="#collapseCard" role="button" aria-expanded="false" aria-controls="collapseCard">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-light card-element">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    <img src="https://picsum.photos/id/1/300/150" class="float-right ml-3 mb-3" alt="example image">
+                    <p><strong>Op basis van de door jouw ingevulde antwoorden is het aannemelijk dat het kind te maken heeft met aan AD(H)D gerelateerde klachten.</strong></p>
+                    <p>Niet alleen wordt er hoog gescoord op het gebied van aandacht en concentratie, maar wordt er ook (boven)gemiddeld gescoord op het gebied van hyperactiviteit en impulsiviteit.</p>
+                </div>
+                <div class="card-meta">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-light card-element">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    <p>Niet alleen wordt er hoog gescoord op het gebied van aandacht en concentratie, maar wordt er ook (boven)gemiddeld gescoord op het gebied van hyperactiviteit en impulsiviteit.</p>
+                    <p><a href="#">Klik hier om het rapport te downloaden</a></p>
+                    <ul>
+                        <li><strong>Download de eerste middelen</strong></li>
+                        <li>Download wat andere spullen</li>
+                        <li><a href="#" target="_blank">Download nog een dingetje</a></li>
+                    </ul>
+                </div>
+                <div class="card-meta">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-light card-element">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-arrows-alt"></i>
+                </div>
+                <div class="card-title">
+                    <a href="#" class="btn btn-primary">
+                        Register now!
+                    </a>
+                </div>
+                <div class="card-meta">
+                    <i class="fas fa-mouse"></i>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn btn-sm btn-secondary">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="tab-pane fade" id="nav-entries" role="tabpanel" aria-labelledby="nav-entries-tab">
+        <div class="alert alert-info">
+    Configure your form in way that suits your organisation best. Add various types of elements and show them conditionally with visibility rules.
+</div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <div class="modal" tabindex="-1" role="dialog" id="modalAddCode">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add a HTML paragraph to your report</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <textarea class="editor"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Add form</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        tinymce.init({
+            selector: 'textarea.editor'
+        });
+    </script>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="modalAddTag">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add a tag to your form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Add tag</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="modalDeleteForm">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete this form.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure to delete this form? The attached data <strong>can not be retreived</strong> after deleting this form.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger">Delete form</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="modalDeleteElement">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete this element</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure to delete this element? The attached data <strong>can not be retreived</strong> after deleting this element.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger">Delete element</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="modalEditVisibilityRules">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit visibility rules</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Add form</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $("#sortableElements, #sortableReporting").sortable({
+        placeholder: "alert-warning",
+        forcePlaceholderSize: true
+    });
+    $("#sortableElements, #sortableReporting").disableSelection();
+});
+</script>
+
+</body>
+</html>
