@@ -6,7 +6,7 @@
     <meta name='robots' content='noindex,nofollow' />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Homepage | Roboform</title>
+    <title>Login | Roboform</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -19,43 +19,48 @@
     <script src="https://kit.fontawesome.com/542e44eee1.js" crossorigin="anonymous"></script>
 
 </head>
-<body class="page- page-home d-flex">
+<body class="page- page-home d-flex bg-primary align-items-center">
 
-        <nav class="region-navbar">
-            <div class="navbar navbar-dark bg-dark">
-    <a href="index.html" class="navbar-brand btn btn-primary">
-        <i class="fas fa-robot"></i>
-    </a>
-    <div class="navbar-nav">
-        <a class="nav-link " href="forms.html">Forms</a>
-        <a class="nav-link " href="users.html">Users</a>
-        <a class="nav-link disabled" href="#">Analytics</a>
-    </div>
-    <div class="navbar-right">
-        <a class="nav-link" href="profile.html">
-            <i class="fas fa-user-circle"></i>
-        </a>
-        <a class="nav-link" href="login.html">
-            <i class="fas fa-sign-out-alt"></i>
-        </a>
-    </div>
-</div>
-
-    </nav>
     
     <main role="main" class="region-main">
 
-                <div class="jumbotron">
-            <div class="container">
-            <h1 class="h2">Hi Mats!</h1>
-
-                        </div>
-        </div>
         
         <article class="region-content container">
             <div class="row">
                 <div class="col-md-12">
-                    
+                    <div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="text-center p-4">
+            <i class="fas fa-robot icon-logo"></i>
+        </div>
+        <div class="card card-light">
+            <form action="index.html">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>E-mail:</label>
+                        <input type="test" class="form-control" placeholder="e-mail">
+                    </div>
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" class="form-control" placeholder="password">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="inputRememberMe">
+                        <label class="form-check-label" for="inputRememberMe">Remember me</label>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <button class="btn btn-link">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
                 </div>
             </div>
         </article>
