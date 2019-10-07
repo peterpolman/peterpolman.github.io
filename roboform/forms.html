@@ -21,7 +21,7 @@
 </head>
 <body class="page- page-home d-flex">
 
-        <nav class="region-navbar">
+        <nav class="region-navbar" id="collapseNavbar">
             <div class="navbar navbar-dark bg-dark">
     <a href="index.html" class="navbar-brand btn btn-primary">
         <i class="fas fa-robot"></i>
@@ -44,7 +44,6 @@
     </nav>
     
     <main role="main" class="region-main">
-
                 <div class="jumbotron">
             <div class="container">
             <h1 class="h2">Form Management</h1>
@@ -64,14 +63,14 @@
     <i class="fas fa-info-circle mr-2"></i> Make sure to publish your form after creating it.
 </div>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 mb-4">
         <div class="card">
             <div class="card-body">
                 <h2 class="h5">Online Depressie Test</h2>
                 <hr>
                 <p class="mb-0 text-secondary">
                     <i class="fab fa-elementor"></i> 4 form elements<br>
-                    <i class="fas fa-star"></i> 3 reporting elements<br>
+                    <i class="fas fa-file-contract"></i> 3 reporting elements<br>
                     <i class="fas fa-share-square"></i> 0 form entries
                 </p>
             </div>
@@ -86,14 +85,14 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-4">
         <div class="card">
             <div class="card-body">
                 <h2 class="h5">Online ADHD (en ADD) Test</h2>
                 <hr>
                 <p class="mb-0 text-secondary">
                     <i class="fab fa-elementor"></i> 12 form elements<br>
-                    <i class="fas fa-star"></i> 8 reporting elements<br>
+                    <i class="fas fa-file-contract"></i> 8 reporting elements<br>
                     <i class="fas fa-share-square"></i> 32 form entries
                 </p>
             </div>
@@ -108,7 +107,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-4">
         <div class="card bg-light h-100 ">
             <div class="card-body d-flex align-items-center justify-content-center">
                 <button data-toggle="modal" data-target="#modalAddForm" class="btn btn-lg btn-primary">
@@ -123,7 +122,19 @@
             </div>
         </article>
 
-    </main>
+                <div class="dropup dropup-navbar">
+            <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-hamburger"></i>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item active" href="forms.html">Forms</a>
+                <a class="dropdown-item " href="users.html">Users</a>
+                <a class="dropdown-item " href="profile.html">Profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+        </div>
+            </main>
 
     <div class="modal fade" tabindex="-1" role="dialog" id="modalAddForm">
     <div class="modal-dialog modal-dialog-centered" role="document">

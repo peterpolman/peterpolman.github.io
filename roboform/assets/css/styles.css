@@ -65,6 +65,44 @@ h1, h2, h3, h4, h5,
  *
  */
 
+.dropup-navbar {
+    display: none;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1;
+}
+
+.dropup-navbar .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.dropup-navbar .dropdown-menu {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.dropup-navbar.show .btn,
+.dropup-navbar.show .dropdown-menu {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+    .dropup-navbar {
+        display: block;
+    }
+
+    .region-navbar {
+        display: none;
+    }
+
+    .region-content {
+        padding-bottom: 1rem;
+    }
+}
+
 .region-main {
     flex: 1;
     overflow: auto;
@@ -123,6 +161,12 @@ h1, h2, h3, h4, h5,
 
 .jumbotron .h1 {
     margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .jumbotron .h2 {
+        margin-bottom: 2rem;
+    }
 }
 
 .jumbotron .nav-tabs {

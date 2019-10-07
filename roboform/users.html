@@ -21,7 +21,7 @@
 </head>
 <body class="page- page-home d-flex">
 
-        <nav class="region-navbar">
+        <nav class="region-navbar" id="collapseNavbar">
             <div class="navbar navbar-dark bg-dark">
     <a href="index.html" class="navbar-brand btn btn-primary">
         <i class="fas fa-robot"></i>
@@ -44,7 +44,6 @@
     </nav>
     
     <main role="main" class="region-main">
-
                 <div class="jumbotron">
             <div class="container">
             <h1 class="h2">User Management</h1>
@@ -117,8 +116,8 @@
                 <!-- <small class="text-secondary"><i class="fas fa-users"></i> Administrators</small> -->
                 <hr>
                 <p class="mb-0 text-secondary">
-                    <i class="fas fa-building"></i> 25 Knots<br>
-                    <i class="fas fa-at"></i> jaap@jaapjan.nl<br>
+                    <i class="fas fa-building"></i> Hidden Layers B.V.<br>
+                    <i class="fas fa-at"></i> peter@peterpolman.nl<br>
                     <i class="fas fa-phone"></i> +31612345678<br>
                 </p>
             </div>
@@ -148,7 +147,19 @@
             </div>
         </article>
 
-    </main>
+                <div class="dropup dropup-navbar">
+            <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-hamburger"></i>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item " href="forms.html">Forms</a>
+                <a class="dropdown-item active" href="users.html">Users</a>
+                <a class="dropdown-item " href="profile.html">Profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+        </div>
+            </main>
 
     <div class="modal fade" tabindex="-1" role="dialog" id="modalAddUser">
     <div class="modal-dialog modal-dialog-centered" role="document">
