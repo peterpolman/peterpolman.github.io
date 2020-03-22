@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Kalam:400,700&display=swap');
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans', serif;
+    color: #58514b;
+    height: 100%;
+}
+
+body {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+    font-family: 'Kalam', sans-serif;
+    font-weight: 700;
+    color: #58514b;
+}
+
+.region-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.region-content {
+    padding: 4rem 0;
+    flex: 1;
+}
+
+.region-footer {
+    padding: 4rem 2rem;
+    background-color: #CEECFF;
+}
+
+.navbar-right .nav-item:hover .fab {
+    color: #84C3F8;
+}
+
+.card-blue {
+    background-color: #e1f0fd;
+}
+
+.btn:not(.btn-outline-dark) {
+    border: 0;
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: #84C3F8;
+    font-family: 'Kalam', sans-serif;
+}
+
+.btn-secondary {
+    background-color: #c1e1fb;
+    font-family: 'Kalam', sans-serif;
+}
+
+.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    filter: grayscale(100%);
+    transition: .25s filter ease, .25s opacity ease;
+}
+
+.card-header-background {
+    display: block;
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.card {
+    transition: 1s opacity ease;
+}
+
+.card:hover .disabled {
+    filter: grayscale(0%);
+    opacity: 1;
+    cursor: default;
+}
