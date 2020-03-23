@@ -6,7 +6,7 @@
     <meta name='robots' content='noindex,nofollow' />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Coca Cola | Changing Ways</title>
+    <title>Recycling | Changing Ways</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -19,7 +19,7 @@
     <script src="https://kit.fontawesome.com/542e44eee1.js" crossorigin="anonymous"></script>
 
 </head>
-<body class="page-organisations ">
+<body class="page-content ">
 
         <nav class="region-navbar" id="collapseNavbar">
             <div class="navbar navbar-expand-lg navbar-light bg-light">
@@ -79,7 +79,7 @@
             <div class="navbar-expand-lg navbar-dark bg-dark">
     <div class="container pb-2 pt-2">
         <div class="navbar-nav">
-            <a class="nav-item nav-link " href="content.html">
+            <a class="nav-item nav-link active" href="content.html">
                 Content
             </a>
             <a class="nav-item nav-link " href="users.html">
@@ -96,32 +96,36 @@
         <article class="region-content container">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <h2>Nieuwe organisatie</h2>
-<p>
-    Heb je tags toegevoegd in het Robobot dashboard? Haal ze dan op door de data te synchroniseren.
-</p>
-<button class="btn btn-success">Synchroniseer</button>
+                    <h2>Recycling (Coca Cola)</h2>
 <hr />
 <div class="form-group">
-    <label for="inputOrganisation">Organisatie</label>
-    <input type="text" id="inputOrganisation" class="form-control" value="">
+    <label for="inputTitle">Title</label>
+    <input type="text" id="inputTitle" class="form-control" value="Recycling">
+    <small class="text-muted">Robobot title: Recycling (Coca Cola)</small>
 </div>
 <div class="form-group">
-    <p>
-        Selecteer welke content deze organisatie mag zien aan de hand van de formulier tag.
-    </p>
-    <div class="disabled">
-        <input id="checkbox2-2" type="radio" name="row2" class="custom-checkbox" />
-        <label for="checkbox2-2">Den Bosch</label>
+    <label>Afbeelding</label>
+    <div class="input-group">
+        <div class="custom-file"><input type="file" id="inputGroupFile" class="custom-file-input">
+            <label for="inputGroupFile" class="custom-file-label">Choose file</label>
+        </div>
     </div>
-    <div>
-        <input id="checkbox2-3" disabled type="radio" name="row2" class="custom-checkbox" />
-        <label for="checkbox2-3">Coca Cola</label>
-    </div>
-    <div>
-        <input id="checkbox2-1" type="radio" name="row2" class="custom-checkbox" />
-        <label for="checkbox2-1">Andere tag</label>
-    </div>
+    <small>Maximum file size
+        <strong>5MB</strong>. Allowed extensions:
+        <strong>.csv</strong>
+    </small>
+</div>
+<div class="form-group">
+    <label for="inputDescription">Beschrijving</label>
+    <textarea id="inputDescription" class="form-control">Mauris et pretium ex, vel fringilla massa. Suspendisse quis molestie nisi, ac porttitor quam.</textarea>
+</div>
+<div class="form-group">
+    <label for="inputLink">Meer informatie</label>
+    <input type="text" id="inputLink" class="form-control" value="https://www.waychangers.nl/casus/recycling">
+</div>
+<div class="form-group">
+    <label for="inputPrice">Prijs</label>
+    <input type="number" id="inputPrice" class="form-control" value="2500">
 </div>
 <hr />
 <div class="text-right">
