@@ -19,7 +19,7 @@
     <script src="https://kit.fontawesome.com/542e44eee1.js" crossorigin="anonymous"></script>
 
 </head>
-<body class="page-content ">
+<body class="page-content-cases ">
 
         <nav class="region-navbar" id="collapseNavbar">
             <div class="navbar navbar-expand-lg navbar-light bg-light">
@@ -79,14 +79,17 @@
             <div class="navbar-expand-lg navbar-dark bg-dark">
     <div class="container pb-2 pt-2">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="content.html">
-                Content
+            <a class="nav-item nav-link active" href="content-cases.html">
+                Casussen
             </a>
-            <a class="nav-item nav-link " href="users.html">
-                Gebruikers
+            <a class="nav-item nav-link " href="content-pages.html">
+                Paginas
             </a>
             <a class="nav-item nav-link " href="organisations.html">
                 Organisaties
+            </a>
+            <a class="nav-item nav-link " href="users.html">
+                Gebruikers
             </a>
         </div>
     </div>
@@ -104,13 +107,18 @@
     <small class="text-muted">Robobot title: Recycling (Coca Cola)</small>
 </div>
 <div class="form-group">
+    <label for="inputTag">Tag</label>
+    <input type="text" id="inputTag" disabled class="form-control" value="Coca Cola" readonly>
+    <small class="text-muted">Tags kunnen alleen in Robobot ingesteld worden</small>
+</div>
+<div class="form-group">
     <label>Afbeelding</label>
     <div class="input-group">
         <div class="custom-file"><input type="file" id="inputGroupFile" class="custom-file-input">
             <label for="inputGroupFile" class="custom-file-label">Choose file</label>
         </div>
     </div>
-    <small>Maximum file size
+    <small class="text-muted">Maximum file size
         <strong>5MB</strong>. Allowed extensions:
         <strong>.csv</strong>
     </small>
@@ -129,7 +137,7 @@
 </div>
 <hr />
 <div class="text-right">
-    <a href="content.html" class="btn btn-dark">
+    <a href="content-cases.html" class="btn btn-dark">
         Opslaan
     </a>
 </div>
